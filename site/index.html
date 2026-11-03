@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ranking oficial do jogo Código Milionário. Acompanhe os melhores jogadores, tempos e premiações.">
+    <title>Código Milionário | Ranking Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Cinzel:wght@600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#" aria-label="Código Milionário Home">
+            <span class="brand-icon">CM</span>
+            <span class="brand-text">CÓDIGO <strong>MILIONÁRIO</strong></span>
+        </a>
+        <div class="topbar-right">
+            <span class="game-badge">JOGO: CÓDIGO MILIONÁRIO</span>
+            <span class="status"><span class="status-dot"></span> RANKING AO VIVO</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <p class="eyebrow">COMPETIÇÃO OFICIAL</p>
+            <h1>Quem conquistará o <span>milhão?</span></h1>
+            <p class="subtitle">Acompanhe os melhores jogadores, premiações alcançadas e tempos de resposta.</p>
+        </section>
+
+        <section class="ranking-section" aria-label="Tabela de Classificação">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CLASSIFICAÇÃO TOP 10</p>
+                    <h2>Melhores Jogadores</h2>
+                </div>
+                <button id="refresh-button" class="refresh-button" title="Atualizar classificação agora">
+                    <span class="refresh-icon">↻</span> Atualizar
+                </button>
+            </div>
+
+            <div class="ranking-card">
+                <div class="ranking-header">
+                    <span class="col-pos">POSIÇÃO</span>
+                    <span class="col-player">JOGADOR</span>
+                    <span class="col-prize">PRÊMIO</span>
+                    <span class="col-score">ACERTOS</span>
+                    <span class="col-time">TEMPO</span>
+                    <span class="col-date">DATA</span>
+                </div>
+
+                <div id="ranking-list" role="region" aria-live="polite">
+                    <div class="message loading">
+                        <span class="spinner"></span> Carregando ranking...
+                    </div>
+                </div>
+            </div>
+
+            <div class="ranking-footer-info">
+                <p id="status-message" class="status-message"></p>
+                <p id="last-updated" class="last-updated"></p>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <div class="footer-left">
+                <strong>CÓDIGO MILIONÁRIO</strong>
+                <span>Projeto educacional de programação em Python, Supabase e Web</span>
+            </div>
+            <div class="footer-right">
+                <span>Premiação máxima: <strong>R$ 1.000.000,00</strong></span>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Supabase JS Client v2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
